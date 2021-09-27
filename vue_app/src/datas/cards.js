@@ -1,7 +1,16 @@
 const cards = {
     "seed": {
         "name": "Seed",
-        "slug": "seed"
+        "slug": "seed",
+        "mana": {
+            'fire': 0,
+            'water': 0,
+            'air': 0,
+            'vegetal': 0,
+            'mineral': 0,
+            'arcane': 0
+        },
+        "components": []
     },
     "sprouted_seed": {
         "name": "Sprouted seed",
