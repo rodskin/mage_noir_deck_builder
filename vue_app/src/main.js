@@ -9,6 +9,8 @@ import manaIcon from '@/components/mana_icon'
 
 // DATAS
 import cards from './datas/cards.js'
+import currentDeck from './datas/current_deck.js'
+import ingredients from './datas/ingredients.js'
 
 // APP
 const app = createApp(App)
@@ -17,5 +19,7 @@ app.use(router)
 app.component('cardHolder', cardHolder)
 app.component('manaIcon', manaIcon)
 app.config.globalProperties.$cards = cards
+app.config.globalProperties.$currentDeck = currentDeck
+app.config.globalProperties.$ingredients = ingredients
 
 app.mount('#app')

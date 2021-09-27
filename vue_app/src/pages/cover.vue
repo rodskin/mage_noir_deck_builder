@@ -1,9 +1,13 @@
 <template>
     <div class="cover">
-        <h1>{{ card.slug }}</h1>
-        <li v-for="card in currentDeck" :key="card.id">
-            <cardHolder :slug="card" />
-        </li>
+        <h1></h1>
+        <manaIcon :mana="mana" />
+        <div class="cards_block" v-for="(qty, key, index) in cardsList" :key="index">
+            {{ key }}:{{ qty }}
+            <div class="card_wrapper" v-for="item in qty" :key="item">
+                <cardHolder :slug="key" />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -11,11 +15,10 @@
     export default {
         name: 'pageCover',
         data () {
+            console.log(this.$currentDeck.cards);
             return {
-                currentDeck: [
-                    'seed', 'prodigious_sowing', 'druid_horns', 'dead_tree', 'seed'
-                ],
-                card: this.$cards['seed']
+                cardsList: this.$currentDeck.cards,
+                mana: 'fire'
             }
         }
     }
