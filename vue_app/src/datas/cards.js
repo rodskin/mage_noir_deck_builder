@@ -10,7 +10,7 @@ const cards = {
             'mineral': 0,
             'arcane': 0
         },
-        "components": []
+        "components": {}
     },
     "sprouted_seed": {
         "name": "Sprouted seed",
@@ -18,7 +18,21 @@ const cards = {
     },
     "animated_tree": {
         "name": "Animated tree",
-        "slug": "animated_tree"
+        "slug": "animated_tree",
+        "mana": {
+            'fire': 0,
+            'water': 1,
+            'air': 0,
+            'vegetal': 3,
+            'mineral': 0,
+            'arcane': 0
+        },
+        "components": {
+            'seed': {
+                'name': 'Seed',
+                'qty': 1
+            }
+        }
     },
     "dead_tree": {
         "name": "Dead tree",
