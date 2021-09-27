@@ -5,7 +5,8 @@ import router from './router'
 //import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 
 // COMMON COMPONNENTS
-import cardHolder from '@/components/card_holder'
+import cardBlock from '@/components/card_block'
+import cardLine from '@/components/card_line'
 import manaIcon from '@/components/mana_icon'
 
 // DATAS
@@ -32,8 +33,10 @@ library.add(faUndoAlt);
 const app = createApp(App)
 app.use(router)
 //app.use(VueSidebarMenu)
-app.component('cardHolder', cardHolder)
+app.component('cardBlock', cardBlock)
+app.component('cardLine', cardLine)
 app.component('manaIcon', manaIcon)
+app.component('font-awesome-icon', FontAwesomeIcon)
 app.config.globalProperties.$cards = cards
 app.config.globalProperties.$currentDeck = currentDeck
 app.config.globalProperties.$ingredients = ingredients

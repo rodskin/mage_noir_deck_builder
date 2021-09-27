@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'card_holder',
+    name: 'card_block',
     props: ['slug'],
     data() {
         return {
