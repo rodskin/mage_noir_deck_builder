@@ -17,6 +17,8 @@ export default {
 <style scoped lang="scss">
     .mana_icon {
         border-radius: 50%;
+        width: 15px;
+        height: 15px
     }
 </style>
 
