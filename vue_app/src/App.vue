@@ -4,13 +4,13 @@
         <router-link to="/about">About</router-link>
     </div>
     <h1>Mage Noir - Deck builder</h1>
-    <HelloWorld msg="toto" />
-    <div class="page_content">
+    <div id="page_left">toto</div>
+    <div id="page_content">
         <router-view/>
     </div>
 </template>
 
-<style>
+<style scoped lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,4 +19,18 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#page_left {
+    width: 30%;
+    float: left;
+    border-left: 1px solid black;
+}
+#page_content {
+    width: 70%;
+    float: left;
+    &:after {
+        clear:both;
+    }
+}
+
 </style>
