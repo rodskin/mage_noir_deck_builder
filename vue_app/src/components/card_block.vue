@@ -1,11 +1,14 @@
 <template>
-    <img v-if="card_front != ''" class="card" :src="card_front" />
+    <div class="cardBlock_wrapper">
+        <img v-if="card_front != ''" class="card" :src="card_front" />
+        <div v-if="add != ''" class="card_add">+</div>
+    </div>
 </template>
 
 <script>
 export default {
     name: 'card_block',
-    props: ['slug'],
+    props: ['slug', 'add'],
     data() {
         let card_url = ''
         if (this.slug != '') {
