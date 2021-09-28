@@ -27,7 +27,7 @@
             return {
                 cardsList: this.$currentDeck.cards,
                 mana: 'fire',
-                display: 'list'
+                display: 'grid'
             }
         }
     }

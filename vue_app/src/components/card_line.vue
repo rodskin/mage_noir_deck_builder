@@ -8,8 +8,8 @@ export default {
     props: ['slug', 'qty'],
     data() {
         return {
-            card_name: this.$cards[this.slug].name
-            quan tity: this.quantity
+            card_name: this.$cards[this.slug].name,
+            quantity: this.quantity
         }
     }
 }

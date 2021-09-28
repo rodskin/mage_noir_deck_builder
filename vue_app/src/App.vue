@@ -1,36 +1,44 @@
 <template>
-    <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-    </div>
-    <h1>Mage Noir - Deck builder</h1>
-    <div id="page_left">toto</div>
-    <div id="page_content">
-        <router-view/>
+    <header>
+        <h1 id="app_title">Mage Noir - Deck builder</h1>
+        <div id="nav">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/about">About</router-link>
+        </div>
+    </header>
+    <div id="app_body">
+        <div id="page_left">
+        <!--<searchAutocomplete :items="cardsAvailable" />-->
+        <Autocomplete
+            @input="getItems"
+            :results="items"
+        ></Autocomplete>
+        </div>
+        <div id="page_content">
+            <router-view/>
+        </div>
     </div>
 </template>
 
-<style scoped lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-#page_left {
-    width: 30%;
-    float: left;
-    border-left: 1px solid black;
-}
-#page_content {
-    width: 70%;
-    float: left;
-    &:after {
-        clear:both;
+<script>
+    export default {
+        data () {
+            let searchList = []
+            let valuesOnly = []
+            Object.keys(this.$cards).forEach(key => {
+                searchList.push({'key': key, 'value': this.$cards[key].name})
+                valuesOnly.push(this.$cards[key].name)
+            })
+            console.log(searchList)
+            return {
+                //cardsAvailable: this.$cards
+                cardsAvailable: searchList,
+                //cardsAvailable: valuesOnly
+                results: valuesOnly.push
+            }
+        },
     }
-}
+</script>
 
+<style scoped lang="scss">
 </style>

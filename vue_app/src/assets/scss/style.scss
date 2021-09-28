@@ -1,23 +1,60 @@
-.player_name {
-    color: $player_name_color;
-    font-weight: bold;
-}
-a {
-    text-decoration: none;
-    font-weight: bold;
-    &.link_ko {
+body {
+    padding-top: 0;
+    margin: 0;
+    height: 100vh;
+    #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        height: 100%;
+        position: relative;
+        header {
+            top: 10px;
+            position: absolute;
+            width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 1000;
+        }
+    }
+    #app_body {
+        padding-top: 121px;
+        display: flex;
+        height: 100%;
+        align-items: stretch;
+        position: relative;
+        flex-direction: row;
+        #page_left {
+            border-left: 1px solid black;
+            align-items: stretch;
+            width: 30%;
+            background-color: #BBBBBB;
+            overflow: auto;
+        }
+        #page_content {
+            flex: 2;
+            overflow: auto;
+        }
+    }
+    #app_title {
         text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 10px 0;
     }
-    &.bestiary_link {
-        color: $bestiary_link;
+    #nav {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
     }
-    &.bestiary_link_ko {
-        color: $error_link;
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #000000;
     }
-    &.page_link {
-        color: $page_link;
-    }
-    &.page_link_ko {
-        color: $error_link;
+    #page_left {
     }
 }
