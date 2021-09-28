@@ -27,10 +27,11 @@
         class="autocomplete-result"
         :class="{ 'is-active': i === arrowCounter }"
       >
-        {{ result }}
+      {{ result[1] }}
       </li>
     </ul>
   </div>
+    <cardBlock :slug="searchKey" :key="forcedKey" />
 </template>
 
 <script>
@@ -53,8 +54,10 @@
         isOpen: false,
         results: [],
         search: '',
+        searchKey: '',
         isLoading: false,
         arrowCounter: -1,
+        forcedKey: 0,
       };
     },
     watch: {
@@ -73,7 +76,11 @@
     },
     methods: {
       setResult(result) {
-        this.search = result;
+        let myResult = (Object.assign({}, result))
+        console.log(myResult[1])
+        this.search = myResult[1]
+        this.searchKey = myResult[0]
+        this.forcedKey += 1
         this.isOpen = false;
       },
       filterResults() {
@@ -119,7 +126,7 @@
         this.search = this.results[this.arrowCounter];
         this.isOpen = false;
         this.arrowCounter = -1;
-      },
+      }
     },
   };
 </script>

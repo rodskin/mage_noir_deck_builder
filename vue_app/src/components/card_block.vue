@@ -1,5 +1,5 @@
 <template>
-    <img class="card" :src="card_front" />
+    <img v-if="card_front != ''" class="card" :src="card_front" />
 </template>
 
 <script>
@@ -7,8 +7,12 @@ export default {
     name: 'card_block',
     props: ['slug'],
     data() {
+        let card_url = ''
+        if (this.slug != '') {
+            card_url = require('@/assets/cards/' + this.slug + '.png')
+        } 
         return {
-            card_front: require('@/assets/cards/' + this.slug + '.png')
+            card_front: card_url
         }
     }
 }
