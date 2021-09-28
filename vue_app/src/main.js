@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App'
 import router from './router'
-import Autocomplete from 'vue3-autocomplete'
 
 // COMMON COMPONNENTS
 import cardBlock from '@/components/card_block'
@@ -19,7 +18,6 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'v-autocomplete/dist/v-autocomplete.css'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import 'vue3-autocomplete/dist/vue3-autocomplete.css'
 require('@/assets/scss/_root.scss')
 
 // FONT AWECOME ICONS
@@ -34,7 +32,6 @@ library.add(faUndoAlt);
 // APP
 const app = createApp(App)
 app.use(router)
-app.use(Autocomplete)
 app.component('cardBlock', cardBlock)
 app.component('cardLine', cardLine)
 app.component('manaIcon', manaIcon)

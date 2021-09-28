@@ -9,10 +9,6 @@
     <div id="app_body">
         <div id="page_left">
         <!--<searchAutocomplete :items="cardsAvailable" />-->
-        <Autocomplete
-            @input="getItems"
-            :results="items"
-        ></Autocomplete>
         </div>
         <div id="page_content">
             <router-view/>
@@ -23,19 +19,19 @@
 <script>
     export default {
         data () {
+            /*
             let searchList = []
             let valuesOnly = []
             Object.keys(this.$cards).forEach(key => {
                 searchList.push({'key': key, 'value': this.$cards[key].name})
                 valuesOnly.push(this.$cards[key].name)
             })
-            console.log(searchList)
             return {
                 //cardsAvailable: this.$cards
-                cardsAvailable: searchList,
+                cardsAvailable: searchList
                 //cardsAvailable: valuesOnly
-                results: valuesOnly.push
             }
+            */
         },
     }
 </script>
