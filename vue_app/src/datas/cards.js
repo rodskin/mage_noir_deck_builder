@@ -892,7 +892,7 @@ const cards = {
         },
         "components": {}
     },
-    "time_acceleration": {
+    /*"time_acceleration": {
         "name": "Time acceleration",
         "slug": "time_acceleration",
         "mana": {
@@ -904,7 +904,7 @@ const cards = {
             'arcane': 0
         },
         "components": {}
-    },
+    },*/
     "split_second": {
         "name": "Split second",
         "slug": "split_second",
