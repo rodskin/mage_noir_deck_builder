@@ -31,7 +31,7 @@
       </li>
     </ul>
   </div>
-    <cardBlock :slug="searchKey" :key="forcedKey" />
+    <cardBlock :slug="searchKey" :key="forcedKey" :addCard="1" deleteCard="0" />
 </template>
 
 <script>

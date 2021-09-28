@@ -8,7 +8,7 @@
     </header>
     <div id="app_body">
         <div id="page_left">
-        <searchAutocomplete :items="cardsAvailable" />        
+        <searchAutocomplete :items="cardsAvailable" />
         </div>
         <div id="page_content">
             <router-view/>
