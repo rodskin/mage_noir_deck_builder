@@ -77,10 +77,15 @@
         this.isOpen = false;
       },
       filterResults() {
-        let asArray = JSON.parse(JSON.stringify(this.items))
+        /*let asArray = JSON.parse(JSON.stringify(this.items))
         console.log(asArray)
         this.results = asArray.filter((key) => asArray[key].toLowerCase().indexOf(this.search.toLowerCase()) > -1)
-        /*this.results = this.items.filter([key, value] => {
+        */
+        let myItems = (Object.assign({}, this.items))
+        let asArray = Object.entries(myItems);
+
+        this.results = asArray.filter(([key, value]) => key == key && value.toLowerCase().indexOf(this.search.toLowerCase()) > -1)
+        /*this.results = myItems.filter(item => {
           return item.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
         });*/
       },

@@ -16,7 +16,6 @@ import ingredients from './datas/ingredients.js'
 // CSS
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'v-autocomplete/dist/v-autocomplete.css'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 require('@/assets/scss/_root.scss')
 
