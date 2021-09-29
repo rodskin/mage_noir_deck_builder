@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import Vuex from 'vuex'
 import App from './App'
 import router from './router'
 
@@ -16,20 +17,17 @@ import ingredients from './datas/ingredients.js'
 // CSS
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 require('@/assets/scss/_root.scss')
 
 // FONT AWECOME ICONS
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 library.add(faBook);
-import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
-library.add(faExclamationTriangle);
-import { faUndoAlt } from "@fortawesome/free-solid-svg-icons";
-library.add(faUndoAlt);
 
 // APP
 const app = createApp(App)
+app.use(Vuex)
 app.use(router)
 app.component('cardBlock', cardBlock)
 app.component('cardLine', cardLine)

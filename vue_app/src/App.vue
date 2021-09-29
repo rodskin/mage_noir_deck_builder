@@ -7,33 +7,21 @@
         </div>
     </header>
     <div id="app_body">
-        <div id="page_left">
-        <searchAutocomplete :items="cardsAvailable" />
-        </div>
-        <div id="page_content">
-            <router-view/>
-        </div>
+        <router-view/>
     </div>
 </template>
 
 <script>
-    export default {
-        data () {
-            let searchList = []
-            //let valuesOnly = []
-            let searchArray = []
-            Object.keys(this.$cards).forEach(key => {
-                searchList.push({'key': key, 'value': this.$cards[key].name})
-                //valuesOnly.push(this.$cards[key].name)
-                searchArray[key] = this.$cards[key].name
-            })
-            return {
-                //cardsAvailable: this.$cards
-                cardsAvailable: searchArray
-                //cardsAvailable: valuesOnly
-            }
-        },
+/*const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment (state) {
+      state.count++
     }
+  }
+})*/
 </script>
 
 <style scoped lang="scss">
